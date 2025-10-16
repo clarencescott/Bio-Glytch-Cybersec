@@ -1,0 +1,48 @@
+1. Input Validation & Sanitization
+Pattern validation for all fields using regex patterns
+Length limits to prevent buffer overflow attacks
+Real-time validation with visual feedback
+HTML tag removal and special character encoding
+XSS prevention through input sanitization
+
+2. Anti-Bot Protection
+Honeypot field (invisible to users, detects bots)
+Rate limiting (max 3 attempts, 5-second delays)
+Suspicious content detection for injection attempts
+
+3. Form Security Attributes
+novalidate to use custom validation
+maxlength attributes on all inputs
+pattern attributes for client-side validation
+autocomplete attributes for better UX
+data-validate attributes for field identification
+
+4. Comprehensive Content Filtering
+The form now detects and blocks:
+
+Script injection (<script>, javascript:, etc.)
+HTML injection (various HTML tags)
+Event handlers (onclick, onload, etc.)
+Data URIs and suspicious protocols
+DOM manipulation attempts
+Storage access attempts
+5. User Experience Enhancements
+Real-time error messages with matrix-themed styling
+Loading states with spinning animations
+Success notifications with green matrix styling
+Visual validation feedback (red/green borders)
+Rate limiting notifications to inform users
+6. Security Validation Rules
+Name: 2-100 chars, letters/spaces/hyphens only
+Email: Standard email validation, max 254 chars
+Phone: 10-20 digits with formatting characters
+Service: Must match predefined options
+Message: Max 1000 chars, content filtered
+7. Rate Limiting & Abuse Prevention
+Maximum 3 submission attempts
+5-second cooldown between submissions
+Automatic reset after successful submission
+Visual feedback for rate limit violations
+
+
+

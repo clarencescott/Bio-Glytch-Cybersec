@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Free Security Check - Local Business Vulnerability Assessment | BioGlytch</title>
+    <meta name="description" content="Get a FREE 30-minute network security vulnerability scan for your Flint-area business. Professional cybersecurity assessment to protect against threats. Book your consultation today!">
+    <meta name="keywords" content="free security scan, vulnerability assessment Flint, business cybersecurity Michigan, network security check, free consultation cybersecurity">
+    <meta name="author" content="BioGlytch Network Security">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formsubmit.co https://formspree.io;">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), fullscreen=(self), payment=()">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bioglytchstudios.vercel.app/security-check">
+    <meta property="og:title" content="FREE Network Security Check - Protect Your Flint Business">
+    <meta property="og:description" content="Professional 30-minute vulnerability assessment for local businesses. Identify security risks before they become breaches.">
+    <meta property="og:image" content="https://bioglytchstudios.vercel.app/BioGlytchLogo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bioglytchstudios.vercel.app/security-check">
+    
+    <!-- Favicon and Icons -->
+    <link rel="shortcut icon" href="../public/BioGlytchLogo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../public/BioGlytchLogo.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Landing Page Specific Styles -->
+    <style>
+        .landing-hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f1419 100%);
+            color: #00ff41;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 70px;
+        }
+        
+        .landing-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 65, 0.05) 0%, transparent 50%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="matrix" width="20" height="20" patternUnits="userSpaceOnUse"><text x="10" y="15" font-family="monospace" font-size="12" fill="rgba(0,255,65,0.1)" text-anchor="middle">0</text></pattern></defs><rect width="100%" height="100%" fill="url(%23matrix)"/></svg>');
+            opacity: 0.3;
+            animation: matrixRain 20s linear infinite;
+        }
+        
+        .landing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .landing-content h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .landing-content .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            color: #e2e8f0;
+        }
+        
+        .offer-highlight {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .offer-highlight h2 {
+            color: #00ff41;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+        
+        .offer-highlight p {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            margin-bottom: 20px;
+        }
+        
+        .urgency-badge {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff4757 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Service Tab Styles */
+        .service-tab {
+            transition: all 0.3s ease !important;
+        }
+
+        .service-tab:hover {
+            background: rgba(0, 255, 65, 0.8) !important;
+            color: #000 !important;
+        }
+
+        .service-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .service-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .service-tiers {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        }
+        
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .tier-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tier-card.featured {
+            border: 2px solid #00ff41;
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 255, 65, 0.2);
+        }
+        
+        .tier-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #00ff41;
+            color: #000;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 255, 65, 0.15);
+        }
+        
+        .tier-header h3 {
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ff41;
+            margin-bottom: 20px;
+        }
+        
+        .tier-price span {
+            font-size: 1rem;
+            color: #4a5568;
+            font-weight: 400;
+        }
+        
+        .tier-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .tier-features li {
+            padding: 8px 0;
+            color: #4a5568;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .tier-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+            font-weight: bold;
+        }
+        
+        .testimonials {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #00ff41;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00ff41, #00cc33);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            color: #00ff41;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .contact-form-landing {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 255, 65, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .landing-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .landing-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tier-card.featured {
+                transform: none;
+            }
+            
+            .tier-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>BioGlytch Studios</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Hero Section -->
+    <section class="landing-hero">
+        <div class="landing-container">
+            <div class="landing-content">
+                <div class="urgency-badge">
+                    <i class="fas fa-exclamation-triangle"></i> Limited Time Offer
+                </div>
+                <h1>Is Your Business a Sitting Duck for Cyber Criminals?</h1>
+                <p class="subtitle">Don't wait for a breach to find out. Get your FREE 30-minute network security vulnerability scan from Genesee County's only dedicated cybersecurity specialists.</p>
+                
+                <div class="offer-highlight">
+                    <h2><i class="fas fa-gift"></i> FREE Security Check</h2>
+                    <p>Professional 30-minute vulnerability assessment worth $300 - absolutely free for local businesses</p>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> Book Your FREE Scan
+                    </a>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <p style="font-size: 0.9rem; opacity: 0.8;">
+                        <i class="fas fa-check-circle"></i> No obligation • No sales pressure • Immediate results
+                    </p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="security-graphic">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tiers Section -->
+    <section class="service-tiers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Security Solutions</h2>
+                <p>From one-time assessments to ongoing managed security - choose what fits your business needs</p>
+            </div>
+            
+            <!-- Service Type Tabs -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div style="display: inline-flex; background: rgba(0, 255, 65, 0.1); border-radius: 50px; padding: 5px; border: 1px solid rgba(0, 255, 65, 0.3);">
+                    <button class="service-tab" data-tab="assessments" style="background: transparent; color: #00ff41; border: none; padding: 12px 24px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">One-Time Assessments</button>
+                    <button class="service-tab active" data-tab="msp" style="background: #00ff41; color: #000; border: none; padding: 12px 24px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Managed Security (MSP)</button>
+                </div>
+            </div>
+            
+            <!-- One-Time Assessments -->
+            <div id="assessments-content" class="service-content">
+                <div class="tier-grid">
+                    <!-- Essential Tier -->
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <h3>Essential Security</h3>
+                            <div class="tier-price">
+                                $799<span>/assessment</span>
+                            </div>
+                        </div>
+                        <ul class="tier-features">
+                            <li>Network vulnerability scan</li>
+                            <li>Basic security assessment</li>
+                            <li>Written security report</li>
+                            <li>Priority recommendations</li>
+                            <li>1-hour consultation call</li>
+                            <li>Email support for 30 days</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Get Essential</a>
+                    </div>
+
+                    <!-- Compliance Tier (Featured) -->
+                    <div class="tier-card featured">
+                        <div class="tier-header">
+                            <h3>Compliance Plus</h3>
+                            <div class="tier-price">
+                                $1,499<span>/assessment</span>
+                            </div>
+                        </div>
+                        <ul class="tier-features">
+                            <li>Complete network security audit</li>
+                            <li>Compliance gap analysis</li>
+                            <li>Penetration testing basics</li>
+                            <li>Detailed remediation plan</li>
+                            <li>Policy template library</li>
+                            <li>2-hour strategy session</li>
+                            <li>90-day email & phone support</li>
+                            <li>Follow-up scan included</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Compliance Plus</a>
+                    </div>
+
+                    <!-- Enterprise Tier -->
+                    <div class="tier-card">
+                        <div class="tier-header">
+                            <h3>Enterprise Shield</h3>
+                            <div class="tier-price">
+                                $2,999<span>/assessment</span>
+                            </div>
+                        </div>
+                        <ul class="tier-features">
+                            <li>Comprehensive security assessment</li>
+                            <li>Full penetration testing</li>
+                            <li>Red team simulation</li>
+                            <li>Employee security training</li>
+                            <li>Custom security policies</li>
+                            <li>Incident response planning</li>
+                            <li>Quarterly follow-up scans</li>
+                            <li>24/7 emergency support</li>
+                            <li>Ongoing security consulting</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Get Enterprise</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Managed Security Services (MSP) -->
+            <div id="msp-content" class="service-content active">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h3 style="color: #00ff41; font-size: 1.8rem; margin-bottom: 15px;">
+                        <i class="fas fa-shield-alt"></i> Proactive Protection. Ongoing Management. Local Expertise.
+                    </h3>
+                    <p style="color: #4a5568; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                        Keep your business secure around the clock without the high corporate price tag. Continuous monitoring, patch management, and real-time response.
+                    </p>
+                </div>
+                
+                <!-- Core MSP Features -->
+                <div style="background: rgba(0, 255, 65, 0.05); border: 1px solid rgba(0, 255, 65, 0.2); border-radius: 15px; padding: 25px; margin-bottom: 40px;">
+                    <h4 style="color: #00ff41; text-align: center; margin-bottom: 20px; font-size: 1.2rem;">
+                        <i class="fas fa-cogs"></i> Core MSP Features Included
+                    </h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+                        <div style="padding: 5px 0; color: #4a5568; position: relative; padding-left: 20px;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: #00ff41; font-size: 0.8rem; top: 8px;"></i>
+                            24/7 Remote Monitoring & Alerts
+                        </div>
+                        <div style="padding: 5px 0; color: #4a5568; position: relative; padding-left: 20px;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: #00ff41; font-size: 0.8rem; top: 8px;"></i>
+                            Patch & Vulnerability Management
+                        </div>
+                        <div style="padding: 5px 0; color: #4a5568; position: relative; padding-left: 20px;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: #00ff41; font-size: 0.8rem; top: 8px;"></i>
+                            Endpoint Protection (Antivirus, EDR)
+                        </div>
+                        <div style="padding: 5px 0; color: #4a5568; position: relative; padding-left: 20px;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: #00ff41; font-size: 0.8rem; top: 8px;"></i>
+                            Managed Firewalls & Router Security
+                        </div>
+                        <div style="padding: 5px 0; color: #4a5568; position: relative; padding-left: 20px;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: #00ff41; font-size: 0.8rem; top: 8px;"></i>
+                            Secure Cloud Backups & Recovery
+                        </div>
+                        <div style="padding: 5px 0; color: #4a5568; position: relative; padding-left: 20px;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: #00ff41; font-size: 0.8rem; top: 8px;"></i>
+                            Monthly Security Health Reports
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tier-grid">
+                    <!-- MSP Starter -->
+                    <div class="tier-card" style="border-top: 4px solid #48bb78;">
+                        <div class="tier-header">
+                            <h3>🟢 MSP Starter</h3>
+                            <div class="tier-price">
+                                $350<span>/month</span>
+                            </div>
+                            <p style="color: #4a5568; font-size: 0.9rem; margin-top: 10px;">
+                                Up to 10 devices • Small offices & startups
+                            </p>
+                        </div>
+                        <ul class="tier-features">
+                            <li>Remote monitoring & threat detection</li>
+                            <li>Antivirus and endpoint protection</li>
+                            <li>Monthly OS/software patching</li>
+                            <li>Basic email and spam filtering</li>
+                            <li>Monthly security report summary</li>
+                            <li>Business hours support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Choose Starter</a>
+                    </div>
+
+                    <!-- MSP Pro (Featured) -->
+                    <div class="tier-card featured" style="border-top: 4px solid #4299e1;">
+                        <div class="tier-header">
+                            <h3>🔵 MSP Pro</h3>
+                            <div class="tier-price">
+                                $850<span>/month</span>
+                            </div>
+                            <p style="color: #4a5568; font-size: 0.9rem; margin-top: 10px;">
+                                Up to 25 devices • Growing businesses
+                            </p>
+                        </div>
+                        <ul class="tier-features">
+                            <li><strong>Everything in Starter, plus:</strong></li>
+                            <li>Managed firewall & network security</li>
+                            <li>Weekly cloud backups (local + offsite)</li>
+                            <li>Automated vulnerability scans</li>
+                            <li>User account & MFA management</li>
+                            <li>Monthly threat audit</li>
+                            <li>Priority phone support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Pro</a>
+                    </div>
+
+                    <!-- MSP Shield -->
+                    <div class="tier-card" style="border-top: 4px solid #f56565;">
+                        <div class="tier-header">
+                            <h3>🔴 MSP Shield</h3>
+                            <div class="tier-price">
+                                $1,800<span>/month</span>
+                            </div>
+                            <p style="color: #4a5568; font-size: 0.9rem; margin-top: 10px;">
+                                Up to 50 devices • Enterprise-level protection
+                            </p>
+                        </div>
+                        <ul class="tier-features">
+                            <li><strong>Everything in Pro, plus:</strong></li>
+                            <li>24/7 SOC monitoring & response</li>
+                            <li>Priority incident response (2-hour SLA)</li>
+                            <li>Quarterly penetration testing</li>
+                            <li>Compliance support (HIPAA, PCI, NIST)</li>
+                            <li>Dedicated account manager</li>
+                            <li>24/7 emergency support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Choose Shield</a>
+                    </div>
+                </div>
+                
+                <!-- Add-Ons -->
+                <div style="background: rgba(0, 255, 65, 0.05); border: 1px solid rgba(0, 255, 65, 0.2); border-radius: 15px; padding: 25px; margin-top: 40px;">
+                    <h4 style="color: #00ff41; text-align: center; margin-bottom: 20px; font-size: 1.2rem;">
+                        <i class="fas fa-plus-circle"></i> Optional Add-Ons
+                    </h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(255, 255, 255, 0.5); border-radius: 8px;">
+                            <span style="color: #2d3748; font-weight: 500;">Onsite IT Support</span>
+                            <span style="color: #00ff41; font-weight: 700;">$75/hr</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(255, 255, 255, 0.5); border-radius: 8px;">
+                            <span style="color: #2d3748; font-weight: 500;">Website Security Monitoring</span>
+                            <span style="color: #00ff41; font-weight: 700;">$50/month</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(255, 255, 255, 0.5); border-radius: 8px;">
+                            <span style="color: #2d3748; font-weight: 500;">Email Encryption + M365</span>
+                            <span style="color: #00ff41; font-weight: 700;">$25/user/month</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(255, 255, 255, 0.5); border-radius: 8px;">
+                            <span style="color: #2d3748; font-weight: 500;">Secure WiFi Setup</span>
+                            <span style="color: #00ff41; font-weight: 700;">$250 setup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real results from real businesses in the Flint area</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "BioGlytch has been essential in enhancing our website security on a monthly basis. Their proactive monitoring and regular security updates give us confidence that our student data and business information are protected from cyber threats."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">OM</div>
+                        <div class="author-info">
+                            <h4>On The Move Driving School</h4>
+                            <p>Monthly Website Security Enhancement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The New McCree Theater relies on BioGlytch for weekly and monthly network security monitoring. Their consistent oversight ensures our ticketing systems, customer data, and operational networks remain secure while we focus on delivering great entertainment experiences."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">NM</div>
+                        <div class="author-info">
+                            <h4>The New McCree Theater</h4>
+                            <p>Weekly/Monthly Network Security Monitoring</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "General Motors trusts BioGlytch to maintain critical security safety measures for our data infrastructure. Their enterprise-level expertise and attention to detail ensures our sensitive automotive data and manufacturing systems meet the highest security standards."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">GM</div>
+                        <div class="author-info">
+                            <h4>General Motors</h4>
+                            <p>Data Security Safety Measures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Contact Form -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2><i class="fas fa-shield-alt"></i> Secure Your Business Today</h2>
+                <p>Don't become another cybercrime statistic. Book your FREE security check now and discover your vulnerabilities before the bad guys do.</p>
+                
+                <form class="contact-form-landing" id="landingContactForm" novalidate>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="businessName" 
+                            name="business_name" 
+                            placeholder="Business Name *" 
+                            required 
+                            maxlength="100"
+                            autocomplete="organization"
+                            data-validate="business">
+                        <span class="error-message" id="businessName-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="contactName" 
+                            name="contact_name" 
+                            placeholder="Your Name *" 
+                            required 
+                            maxlength="100"
+                            pattern="^[a-zA-Z\s\-'\.]{2,100}$"
+                            autocomplete="name"
+                            data-validate="name">
+                        <span class="error-message" id="contactName-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Business Email *" 
+                            required 
+                            maxlength="254"
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                            autocomplete="email"
+                            data-validate="email">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Phone Number *"
+                            required
+                            maxlength="20"
+                            pattern="^[\+]?[\(\)\-\s\d]{10,20}$"
+                            autocomplete="tel"
+                            data-validate="phone">
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="service" name="service_tier" required data-validate="service">
+                            <option value="">Select Service Tier *</option>
+                            <option value="free-consultation">FREE 30-Minute Security Check</option>
+                            <optgroup label="One-Time Assessments">
+                                <option value="essential">Essential Security ($799)</option>
+                                <option value="compliance">Compliance Plus ($1,499)</option>
+                                <option value="enterprise">Enterprise Shield ($2,999)</option>
+                            </optgroup>
+                            <optgroup label="Managed Security Services (MSP)">
+                                <option value="msp-starter">MSP Starter ($350/month)</option>
+                                <option value="msp-pro">MSP Pro ($850/month)</option>
+                                <option value="msp-shield">MSP Shield Premium ($1,800/month)</option>
+                            </optgroup>
+                        </select>
+                        <span class="error-message" id="service-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="businessSize" name="business_size" data-validate="businessSize">
+                            <option value="">Business Size (Optional)</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="200+">200+ employees</option>
+                        </select>
+                        <span class="error-message" id="businessSize-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea 
+                            id="securityConcerns" 
+                            name="security_concerns" 
+                            placeholder="What are your main security concerns? (Optional)" 
+                            rows="4"
+                            maxlength="500"
+                            data-validate="message"></textarea>
+                        <span class="error-message" id="securityConcerns-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="honeypot" style="display: none;">
+                            <input type="text" id="website" name="website" autocomplete="off" tabindex="-1">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="landingSubmitBtn" style="width: 100%; font-size: 1.1rem;">
+                        <span class="btn-text">
+                            <i class="fas fa-calendar-check"></i> Book My FREE Security Check
+                        </span>
+                        <span class="btn-loader" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Booking...
+                        </span>
+                    </button>
+                    
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8; text-align: center;">
+                        <i class="fas fa-lock"></i> Your information is secure and will never be shared
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>BioGlytch</span>
+                    </div>
+                    <p>Protecting Genesee County businesses with cutting-edge cybersecurity solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#service-tiers">One-Time Assessments</a></li>
+                        <li><a href="#msp-services">Managed Security (MSP)</a></li>
+                        <li><a href="index.html#services">All Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Main Site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/clarence-scott/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@bioglytch"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/AstroClareTech/"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BioGlytch Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Tab functionality for service types
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.service-tab');
+            const contents = document.querySelectorAll('.service-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabType = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(tabType + '-content').classList.add('active');
+                    
+                    // Update tab styles
+                    tabs.forEach(t => {
+                        if (t.classList.contains('active')) {
+                            t.style.background = '#00ff41';
+                            t.style.color = '#000';
+                        } else {
+                            t.style.background = 'transparent';
+                            t.style.color = '#00ff41';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
